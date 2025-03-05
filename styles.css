@@ -20,7 +20,6 @@ header {
     text-align: center;
 }
 
-
 /* Estilos para o contêiner de estrelas */
 #stars-container {
     position: fixed;
@@ -29,7 +28,6 @@ header {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* Coloca as estrelas atrás do conteúdo */
     overflow: hidden;
 }
 
@@ -65,7 +63,6 @@ body.dark-theme {
 
 body.dark-theme header {
     background: rgba(30, 30, 30, 0.8);
-    /* Fundo semi-transparente */
 }
 
 body.dark-theme section,
@@ -74,7 +71,6 @@ body.dark-theme .vantagens-card,
 body.dark-theme .firmware-card,
 body.dark-theme ul li {
     background: rgba(30, 30, 30, 0.8);
-    /* Fundo semi-transparente */
     color: #e0e0e0;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
@@ -85,12 +81,26 @@ body.dark-theme h2 {
 
 body.dark-theme footer {
     background: rgba(30, 30, 30, 0.8);
-    /* Fundo semi-transparente */
 }
 
-body.dark-theme #theme-toggle {
-    background: #333;
-    color: #fff;
+body.dark-theme #firmware {
+    background: rgba(30, 30, 30, 0.8);
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .firmware-card {
+    background: rgba(30, 30, 30, 0.8);
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .firmware-card h3 {
+    color: #0077b6;
+}
+
+body.dark-theme .firmware-card ul li {
+    color: #e0e0e0;
 }
 
 /* Estilos para o botão de alternância de tema */
@@ -116,6 +126,11 @@ body.dark-theme #theme-toggle {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Efeito de neon azul ao passar o mouse sobre o botão */
+#theme-toggle:hover {
+    box-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8, 0 0 40px #00b4d8;
+}
+
 /* Efeito de flutuação */
 @keyframes float {
 
@@ -131,39 +146,6 @@ body.dark-theme #theme-toggle {
 
 .floating-button {
     animation: float 3s ease-in-out infinite;
-}
-
-/* Estilos para o tema escuro */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-theme header {
-    background: #1e1e1e;
-}
-
-body.dark-theme section,
-body.dark-theme .projeto-card,
-body.dark-theme .vantagens-card,
-body.dark-theme .firmware-card,
-body.dark-theme ul li {
-    background: #1e1e1e;
-    color: #e0e0e0;
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
-}
-
-body.dark-theme h2 {
-    color: #0077b6;
-}
-
-body.dark-theme footer {
-    background: #1e1e1e;
-}
-
-body.dark-theme #theme-toggle {
-    background: #333;
-    color: #fff;
 }
 
 header h1 {
@@ -232,7 +214,11 @@ ul li {
     transform: translateY(-2px);
 }
 
-/* Estilos para o tema escuro */
+/* Efeito de neon azul ao passar o mouse sobre o botão */
+.project-link:hover {
+    box-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8, 0 0 40px #00b4d8;
+}
+
 body.dark-theme .project-link {
     background: #333;
     color: #fff;
@@ -300,7 +286,6 @@ body.dark-theme .project-link:hover {
     color: #555;
 }
 
-
 .vantagens-card,
 .firmware-card {
     flex: 1 1 100%;
@@ -339,7 +324,11 @@ body.dark-theme .project-link:hover {
     transform: translateY(-3px);
 }
 
-/* Estilos para o tema escuro */
+/* Efeito de neon azul ao passar o mouse sobre o botão */
+.resource-button:hover {
+    box-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8, 0 0 40px #00b4d8;
+}
+
 body.dark-theme #recursos {
     background: rgba(30, 30, 30, 0.8);
     color: #e0e0e0;
@@ -394,7 +383,11 @@ body.dark-theme .resource-button:hover {
     transform: translateY(-3px);
 }
 
-/* Estilos para o tema escuro */
+/* Efeito de neon azul ao passar o mouse sobre o botão */
+.download-button:hover {
+    box-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8, 0 0 40px #00b4d8;
+}
+
 body.dark-theme #downloads {
     background: rgba(30, 30, 30, 0.8);
     color: #e0e0e0;
@@ -432,7 +425,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 
 /* Responsividade */
 @media (max-width: 768px) {
