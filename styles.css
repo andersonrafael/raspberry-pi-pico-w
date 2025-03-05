@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -213,6 +214,34 @@ ul li {
     transform: translateY(-5px);
 }
 
+/* Estilos para os links dos projetos */
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #0077b6;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+    background: #005f8a;
+    transform: translateY(-2px);
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme .project-link {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-theme .project-link:hover {
+    background: #555;
+}
+
 .vantagens-container {
     display: flex;
     gap: 1rem;
@@ -271,6 +300,122 @@ ul li {
     color: #555;
 }
 
+
+.vantagens-card,
+.firmware-card {
+    flex: 1 1 100%;
+}
+
+/* Estilos para a seção de recursos adicionais */
+#recursos {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.recursos-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resource-button {
+    background: #0077b6;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    flex: 1 1 calc(33.333% - 1rem);
+}
+
+.resource-button:hover {
+    background: #005f8a;
+    transform: translateY(-3px);
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme #recursos {
+    background: rgba(30, 30, 30, 0.8);
+    color: #e0e0e0;
+}
+
+body.dark-theme .resource-button {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-theme .resource-button:hover {
+    background: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .resource-button {
+        flex: 1 1 100%;
+    }
+}
+
+/* Estilos para a seção de downloads */
+#downloads {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.downloads-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.download-button {
+    background: #0077b6;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+    flex: 1 1 calc(25% - 1rem);
+}
+
+.download-button:hover {
+    background: #005f8a;
+    transform: translateY(-3px);
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme #downloads {
+    background: rgba(30, 30, 30, 0.8);
+    color: #e0e0e0;
+}
+
+body.dark-theme .download-button {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-theme .download-button:hover {
+    background: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .download-button {
+        flex: 1 1 100%;
+    }
+}
+
 footer {
     background: #0077b6;
     color: #fff;
@@ -288,16 +433,12 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
 /* Responsividade */
 @media (max-width: 768px) {
 
     .vantagens-container,
     .firmware-container {
         flex-direction: column;
-    }
-
-    .vantagens-card,
-    .firmware-card {
-        flex: 1 1 100%;
     }
 }
