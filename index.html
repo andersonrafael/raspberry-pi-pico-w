@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Pico W - Resumo Técnico</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Raspberry Pi Pico W</h1>
+        <p>Conectividade Wi-Fi para projetos IoT</p>
+    </header>
+
+    <main>
+        <section id="introducao">
+            <h2>Introdução</h2>
+            <p>O Raspberry Pi Pico W é um microcontrolador compacto e acessível desenvolvido pela Raspberry Pi
+                Foundation, lançado como
+                uma evolução do Raspberry Pi Pico original. Introduzido em 2022, ele mantém a essência de seu
+                antecessor, mas adiciona
+                conectividade sem fio, tornando-o ainda mais versátil para projetos de Internet das Coisas (IoT).
+                Equipado com o chip
+                RP2040, um microcontrolador dual-core ARM Cortex-M0+ rodando a até 133 MHz, o Pico W oferece 264 KB de
+                SRAM e 2 MB de
+                memória flash onboard para armazenamento de programas.</p>
+        </section>
+
+        <section id="especificacoes">
+            <h2>Especificações Técnicas</h2>
+            <ul>
+                <li><strong>Microcontrolador:</strong> RP2040 (Dual-core ARM Cortex-M0+ a 133 MHz)</li>
+                <li><strong>Memória:</strong> 264 KB de SRAM, 2 MB de Flash</li>
+                <li><strong>Conectividade:</strong> Wi-Fi 802.11n (2.4 GHz)</li>
+                <li><strong>GPIO:</strong> 26 pinos multifuncionais</li>
+                <li><strong>Alimentação:</strong> 1.8V a 5.5V DC</li>
+            </ul>
+        </section>
+
+        <section id="firmware">
+            <h2>Firmware e Programação</h2>
+            <div class="firmware-container">
+                <div class="firmware-card">
+                    <h3>Linguagens Suportadas</h3>
+                    <ul>
+                        <li>MicroPython</li>
+                        <li>C/C++ (usando o SDK oficial)</li>
+                        <li>CircuitPython</li>
+                    </ul>
+                </div>
+                <div class="firmware-card">
+                    <h3>Ambientes de Desenvolvimento</h3>
+                    <ul>
+                        <li>Thonny (para MicroPython)</li>
+                        <li>Visual Studio Code (com extensão para C/C++)</li>
+                        <li>Arduino IDE (com suporte ao RP2040)</li>
+                    </ul>
+                </div>
+                <div class="firmware-card">
+                    <h3>Bibliotecas e APIs</h3>
+                    <ul>
+                        <li>Bibliotecas para Wi-Fi, GPIO, sensores, etc.</li>
+                        <li>APIs para comunicação TCP/IP, MQTT, HTTP, etc.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Exemplos de Projetos</h2>
+            <div class="projeto-card">
+                <h3>Estação Meteorológica com Wi-Fi</h3>
+                <p>Coleta dados de temperatura, umidade e pressão atmosférica e os envia para um servidor via Wi-Fi.</p>
+            </div>
+            <div class="projeto-card">
+                <h3>Controle Remoto de LEDs via Web</h3>
+                <p>Controla LEDs conectados ao Pico W através de uma interface web.</p>
+            </div>
+            <div class="projeto-card">
+                <h3>Robô Controlado por Wi-Fi</h3>
+                <p>Um robô simples que pode ser controlado via Wi-Fi usando um aplicativo móvel.</p>
+            </div>
+        </section>
+
+        <section id="vantagens">
+            <h2>Vantagens e Desvantagens</h2>
+            <div class="vantagens-container">
+                <div class="vantagens-card">
+                    <h3>Vantagens</h3>
+                    <ul>
+                        <li>Baixo custo</li>
+                        <li>Conectividade Wi-Fi integrada</li>
+                        <li>Facilidade de programação</li>
+                    </ul>
+                </div>
+                <div class="vantagens-card">
+                    <h3>Desvantagens</h3>
+                    <ul>
+                        <li>Memória limitada</li>
+                        <li>Potência de processamento limitada</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="resumo">
+            <h2>Resumo Final</h2>
+            <p>Em resumo, o Raspberry Pi Pico W combina o poder de um microcontrolador eficiente com a conectividade
+                Wi-Fi, abrindo
+                portas para uma ampla gama de aplicações no universo da eletrônica e da IoT. Seu design compacto (51 x
+                21 mm), baixo consumo de energia e preço acessível o torna ideal para iniciantes, entusiastas
+                e desenvolvedores que buscam criar projetos como sensores conectados, automação residencial ou
+                protótipos interativos.
+                Ele pode ser programado em linguagens como MicroPython e C/C++, e oferece flexibilidade para diferentes
+                níveis de
+                habilidades.</p>
+        </section>
+
+        <section id="recursos">
+            <h2>Recursos Adicionais</h2>
+            <ul>
+                <li><a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html"
+                        target="_blank">Documentação Oficial</a></li>
+                <li><a href="https://github.com/raspberrypi/pico-examples" target="_blank">Exemplos no GitHub</a></li>
+                <li><a href="https://micropython.org" target="_blank">Site do MicroPython</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Projeto Raspberry Pi Pico W - Desenvolvido por <span>Francisco Anderson Rafael</span></p>
+        <p>Recursos: <a href="https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html"
+                target="_blank">Documentação Oficial</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
