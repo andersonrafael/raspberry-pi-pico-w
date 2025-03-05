@@ -19,6 +19,152 @@ header {
     text-align: center;
 }
 
+
+/* Estilos para o contêiner de estrelas */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Coloca as estrelas atrás do conteúdo */
+    overflow: hidden;
+}
+
+/* Estilos para as estrelas */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+/* Animação de brilho */
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background: rgba(30, 30, 30, 0.8);
+    /* Fundo semi-transparente */
+}
+
+body.dark-theme section,
+body.dark-theme .projeto-card,
+body.dark-theme .vantagens-card,
+body.dark-theme .firmware-card,
+body.dark-theme ul li {
+    background: rgba(30, 30, 30, 0.8);
+    /* Fundo semi-transparente */
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme h2 {
+    color: #0077b6;
+}
+
+body.dark-theme footer {
+    background: rgba(30, 30, 30, 0.8);
+    /* Fundo semi-transparente */
+}
+
+body.dark-theme #theme-toggle {
+    background: #333;
+    color: #fff;
+}
+
+/* Estilos para o botão de alternância de tema */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: #005f8a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito de flutuação */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.floating-button {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Estilos para o tema escuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background: #1e1e1e;
+}
+
+body.dark-theme section,
+body.dark-theme .projeto-card,
+body.dark-theme .vantagens-card,
+body.dark-theme .firmware-card,
+body.dark-theme ul li {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme h2 {
+    color: #0077b6;
+}
+
+body.dark-theme footer {
+    background: #1e1e1e;
+}
+
+body.dark-theme #theme-toggle {
+    background: #333;
+    color: #fff;
+}
+
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
