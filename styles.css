@@ -20,6 +20,26 @@ header {
     text-align: center;
 }
 
+/* Estilos para a imagem do Raspberry Pi Pico W */
+.pico-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.pico-image:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo para o tema escuro */
+body.dark-theme .pico-image {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
 /* Estilos para o contêiner de estrelas */
 #stars-container {
     position: fixed;
