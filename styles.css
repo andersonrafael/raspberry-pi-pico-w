@@ -30,7 +30,7 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
     position: relative;
     /* Adicionado para posicionamento relativo */
 }
@@ -38,11 +38,11 @@ header {
 .header-search {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
     /* Aumentei o espaçamento entre busca e botão */
-    position: absolute;
+    position: relative;
     /* Posicionamento absoluto */
-    right: 20px;
+    right: 10px;
     /* Alinhado à direita */
     top: 50%;
     /* Centralizado verticalmente */
