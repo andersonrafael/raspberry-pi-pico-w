@@ -20,25 +20,82 @@ header {
     text-align: center;
 }
 
-/* Estilos para a imagem do Raspberry Pi Pico W */
-.pico-image {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+
+
+
+/* Estilos para o cabeçalho */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    /* Adicionado para posicionamento relativo */
 }
 
-.pico-image:hover {
-    transform: scale(1.02);
+.header-search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Aumentei o espaçamento entre busca e botão */
+    position: absolute;
+    /* Posicionamento absoluto */
+    right: 20px;
+    /* Alinhado à direita */
+    top: 50%;
+    /* Centralizado verticalmente */
+    transform: translateY(-50%);
+    /* Ajuste fino para centralização */
 }
 
-/* Estilo para o tema escuro */
-body.dark-theme .pico-image {
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 8px 15px;
+    /* Aumentei o padding para melhor visual */
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    /* Espaço extra entre input e botão */
 }
+
+/* Mantenha o restante do CSS como está */
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 60px;
+        /* Espaço para os elementos flutuantes */
+    }
+
+    .header-search {
+        position: static;
+        transform: none;
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    .search-container {
+        margin-right: 0;
+        flex-grow: 1;
+        max-width: 200px;
+    }
+
+    #theme-toggle {
+        position: static;
+        margin-left: 15px;
+    }
+}
+
+
+
+
 
 /* Estilos para o contêiner de estrelas */
 #stars-container {

@@ -13,18 +13,24 @@
 <body class="light-theme">
     <div id="stars-container"></div> <!-- Contêiner para as estrelas -->
     <header>
-        <h1>Raspberry Pi Pico W</h1>
-        <p>Conectividade Wi-Fi para projetos IoT</p>
-        <button id="theme-toggle" class="floating-button">🌙</button>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Raspberry Pi Pico W</h1>
+                <p>Conectividade Wi-Fi para projetos IoT</p>
+            </div>
+            <div class="header-controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Buscar tópicos...">
+                    <button id="search-button">🔍</button>
+                </div>
+                <button id="theme-toggle" class="floating-button">🌙</button>
+            </div>
+        </div>
     </header>
-
     <main>
 
         <section id="introducao">
             <h2>Introdução</h2>
-
-            <img src="/imagens/diagrama-raspberry-pi-pico.webp" alt="Diagrama do Raspberry Pi Pico W"
-                class="pico-image">
 
 
             <p>O Raspberry Pi Pico W é um microcontrolador compacto e acessível desenvolvido pela Raspberry Pi
@@ -36,6 +42,9 @@
                 RP2040, um microcontrolador dual-core ARM Cortex-M0+ rodando a até 133 MHz, o Pico W oferece 264 KB de
                 SRAM e 2 MB de
                 memória flash onboard para armazenamento de programas.</p>
+
+            <img src="/imagens/diagrama-raspberry-pi-pico.webp" alt="Diagrama do Raspberry Pi Pico W"
+                class="pico-image">
         </section>
 
         <section id="especificacoes">

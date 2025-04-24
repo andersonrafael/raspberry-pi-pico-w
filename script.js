@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme-toggle");
     const body = document.body;
     const starsContainer = document.getElementById("stars-container");
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
 
     // Função para gerar estrelas
     function createStars() {
@@ -13,6 +15,39 @@ document.addEventListener("DOMContentLoaded", function () {
             star.style.left = `${Math.random() * 100}%`;
             star.style.animationDelay = `${Math.random() * 2}s`; // Atraso aleatório para o brilho
             starsContainer.appendChild(star);
+        }
+    }
+
+    // Função de busca
+    function searchAndNavigate() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const headings = document.querySelectorAll('h2');
+        let found = false;
+
+        for (const heading of headings) {
+            if (heading.textContent.toLowerCase().includes(searchTerm)) {
+                // Remove a classe 'highlight' de todos os cabeçalhos
+                headings.forEach(h => h.classList.remove('highlight'));
+
+                // Adiciona a classe 'highlight' ao cabeçalho encontrado
+                heading.classList.add('highlight');
+
+                // Rola a página até o cabeçalho
+                heading.scrollIntoView({ behavior: 'smooth' });
+
+                // Remove o destaque após 2 segundos
+                setTimeout(() => {
+                    heading.classList.remove('highlight');
+                }, 2000);
+
+                found = true;
+                break;
+            }
+        }
+
+        // Se não encontrou nada
+        if (!found) {
+            alert('Nenhum tópico encontrado com esse termo.');
         }
     }
 
@@ -42,6 +77,19 @@ document.addEventListener("DOMContentLoaded", function () {
             createStars(); // Gera estrelas ao ativar o tema escuro
         }
     });
+
+    // Adiciona os event listeners para busca
+    if (searchButton) {
+        searchButton.addEventListener('click', searchAndNavigate);
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                searchAndNavigate();
+            }
+        });
+    }
 
     // Interatividade dos cards de projetos
     const cards = document.querySelectorAll(".projeto-card");
